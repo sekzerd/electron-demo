@@ -1,0 +1,3 @@
+const APP_WIDTH = 1300
+const APP_HEIGHT = 800
+export { APP_WIDTH, APP_HEIGHT }
