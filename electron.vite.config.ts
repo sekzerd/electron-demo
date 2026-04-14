@@ -8,10 +8,23 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()]
+    plugins: [externalizeDepsPlugin()],
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, 'src'),
+        '@main': resolve(__dirname, 'src/main'),
+        '@preload': resolve(__dirname, 'src/preload')
+      }
+    }
   },
   preload: {
-    plugins: [externalizeDepsPlugin()]
+    plugins: [externalizeDepsPlugin()],
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, 'src'),
+        '@preload': resolve(__dirname, 'src/preload')
+      }
+    }
   },
   renderer: {
     resolve: {

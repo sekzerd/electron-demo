@@ -1,10 +1,10 @@
 import { app, shell, BrowserWindow, ipcMain, Tray, Menu, nativeImage } from "electron"
 import { join } from "path"
 import { electronApp, optimizer, is } from "@electron-toolkit/utils"
-import { event_global } from "./event/event_global"
-import { event_window } from "./event/event_window"
+import { event_global } from "@main/event/event_global"
+import { event_window } from "@main/event/event_window"
 import icon from "../../resources/icon.png?asset"
-import { APP_HEIGHT, APP_WIDTH } from "./config"
+import { APP_HEIGHT, APP_WIDTH } from "@main/config"
 
 import { initializeDragPlus } from "electron-drag-plus"
 

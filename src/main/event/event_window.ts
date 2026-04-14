@@ -1,5 +1,6 @@
 // import { AzCustomWindowMove } from "../utils/utils"
-import { APP_HEIGHT, APP_WIDTH } from "../config"
+import { APP_HEIGHT, APP_WIDTH } from "@main/config"
+import {exec } from "child_process"
 function event_window(ipcMain, win) {
     ipcMain.on("win:minimize", (_data) => {
         win.minimize()
@@ -19,6 +20,11 @@ function event_window(ipcMain, win) {
     ipcMain.on("win:close", (_data) => {
         win.close()
         win.destroy()
+    })
+
+    ipcMain.on("control", (_data) => {
+    console.log('oncontrol')
+        exec('control mmsys.cpl')
     })
 }
 

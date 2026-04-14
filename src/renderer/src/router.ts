@@ -1,8 +1,8 @@
 import { createMemoryHistory, createRouter } from "vue-router"
 
-import HomePage from "./pages/Home.vue"
+import HomePage from "@renderer/pages/Home.vue"
 const routes = [
-    { path: "/", name: "HomePage", component: () => import("./pages/Home.vue") },
+    { path: "/", name: "HomePage", component: () => import("@renderer/pages/Home.vue") },
 
 
 ]
